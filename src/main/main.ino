@@ -109,7 +109,7 @@ int8_t poll_UART() {
 
       Serial.println("ACK");
       
-    } else if (commandString.substring(0, 2) == "FT") {
+    } else if (commandString.substring(0, 2) == "FT" && commandString.length() == 3) {
       uint8_t argument = (commandString.substring(2,3)).toInt();
 
       Serial.println("ACK");
